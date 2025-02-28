@@ -15,6 +15,7 @@ public class ScriptorGameRules {
   public static Key<IntegerValue> VOCAL_COOLDOWN_MULTIPLIER;
   public static Key<IntegerValue> TOME_COOLDOWN_MULTIPLIER;
   public static Key<IntegerValue> CASTING_LECTERN_COOLDOWN_MULTIPLIER;
+  public static Key<IntegerValue> CASTING_CRYSTAL_RANGE;
 
 
   public static void register() {
@@ -27,6 +28,7 @@ public class ScriptorGameRules {
     VOCAL_COOLDOWN_MULTIPLIER = GameRules.register("scriptor:vocal_cooldown_multiplier", Category.MISC, IntegerValue.create(100));
     TOME_COOLDOWN_MULTIPLIER = GameRules.register("scriptor:tome_cooldown_multiplier", Category.MISC, IntegerValue.create(100));
     CASTING_LECTERN_COOLDOWN_MULTIPLIER = GameRules.register("scriptor:casting_lectern_cooldown_multiplier", Category.MISC, IntegerValue.create(100));
+    CASTING_CRYSTAL_RANGE = GameRules.register("scriptor:casting_crystal_range", Category.MISC, IntegerValue.create(16));
 
     ChatRules.register();
   }

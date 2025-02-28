@@ -114,7 +114,8 @@ public class CastingLecternBlockEntity extends BlockEntity {
               focusTarget++;
               focusTarget %= foci.size();
               var focus = foci.get(focusTarget);
-              if(focus.getTargetPos().distanceTo(target.getTargetPos()) <= 16 && focus.getLevel() == level)
+              var distance = level.getGameRules().getInt(ScriptorGameRules.CASTING_CRYSTAL_RANGE);
+              if(focus.getTargetPos().distanceTo(target.getTargetPos()) <= distance && focus.getLevel() == level)
                 target.setFinalTargetable(focus);
             }
           }
